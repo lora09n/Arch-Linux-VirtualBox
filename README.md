@@ -172,23 +172,6 @@ echo "::1 localhost" >> /etc/hosts
 echo "127.0.1.1 seniority.localdomain seniority" >> /etc/hosts
 ```
 
-> add user (if dont add user you wont be able to login after installition finished)
-
-
-```sh
-useradd -m seniority
-```
-
-
-```sh
-passwd seniority
-```
-> for ex:1 and 1 again
-
-
-```sh
-usermod -aG wheel username
-```
 
 
 # Install and configure bootloader (GRUB)
@@ -219,7 +202,7 @@ pacman -S firefox gnome-terminal vim nano vlc ffmpeg base-devel git gimp htop ne
 sudo pacman -S sudo
 ```
 > Once the installation is complete, you may need to configure sudo. By default, members of the wheel group are granted sudo privileges. You can add your user account to the wheel group if it's not already a member:
-
+> and (if dont add user you wont be able to login after installition finished)
 
 ```sh
 useradd -m seniority
