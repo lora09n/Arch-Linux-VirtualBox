@@ -13,6 +13,10 @@ pacman -S openssh
 
 
 ```
+> restart openssh server after install
+```sh
+sudo systemctl restart sshd
+```
 > passwd [remember the password to connect on windows cmd]
 > to connect:
 
