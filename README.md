@@ -147,6 +147,7 @@ locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 ```
 
+
 # Set hostname
 
 
@@ -186,7 +187,7 @@ passwd seniority
 
 
 ```sh
-usermod -aG wheel seniority
+usermod -aG wheel username
 ```
 
 
@@ -212,8 +213,51 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 
 ```sh
-pacman -S firefox gnome-terminal vim nano vlc ffmpeg base-devel git gimp htop neofetch gparted zip unzip networkmanager wireless_tools wpa_supplicant dialog
+pacman -S firefox gnome-terminal vim nano vlc ffmpeg base-devel git gimp htop neofetch gparted zip unzip networkmanager wireless_tools wpa_supplicant dialog 
 ```
+```sh
+sudo pacman -S sudo
+```
+> Once the installation is complete, you may need to configure sudo. By default, members of the wheel group are granted sudo privileges. You can add your user account to the wheel group if it's not already a member:
+
+
+```sh
+useradd -m seniority
+```
+
+
+```sh
+passwd seniority
+```
+> for ex:1 and 1 again
+
+
+```sh
+usermod -aG wheel username
+```
+
+
+> Edit the sudoers file to allow members of the wheel group to execute commands as root. You can use the visudo command to safely edit the sudoers file:
+```sh
+
+sudo visudo
+```
+> Within the sudoers file, look for the line that says:
+
+
+```sh
+# %wheel ALL=(ALL) ALL
+```
+> Uncomment this line by removing the # at the beginning:
+
+
+
+```sh
+%wheel ALL=(ALL) ALL
+```
+> Save and exit the editor (usually Ctrl + X, then Y to confirm, and Enter to save).
+
+> You should now be able to use sudo to execute commands with root privileges.
 
 # Exit chroot
 
