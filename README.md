@@ -63,8 +63,8 @@ try this:
 cfdisk /dev/sda
 ```
 
-# Create EFI partition (size 512M, type EF00)
-# Create root partition (remaining space, type 8300)
+> Create EFI partition (size 512M, type EF00)
+> Create root partition (remaining space, type 8300)
 
 # Format partitions
 
@@ -182,7 +182,7 @@ passwd seniority
 
 
 ```sh
-usermod -aG wheel username
+usermod -aG wheel seniority
 ```
 
 
