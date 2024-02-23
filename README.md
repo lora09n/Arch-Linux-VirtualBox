@@ -54,9 +54,9 @@ try this:
  ls /sys/firmware/efi/efivars
 ```
 
-# If the directory is present, it means you're booted in UEFI mode.
+> If the directory is present, it means you're booted in UEFI mode.
 
-# Partitioning the disk (use 'gdisk' or 'cfdisk' for GPT partitioning)
+> Partitioning the disk (use 'gdisk' or 'cfdisk' for GPT partitioning)
 
 
 ```sh
