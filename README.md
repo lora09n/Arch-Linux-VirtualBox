@@ -1,8 +1,12 @@
 first install openssh to connect in windows cmd.
 make sure you have selected briged network instead nat in virtual box
 
-``` pacman -Sy```
-```pacman -S openssh```
+```sh
+pacman -Sy
+```
+```sh
+pacman -S openssh
+```
 > passwd [remember the password to connect on windows cmd]
 > to connect:``` ssh root@ip```
 > if you get this while trying to connect ssh:
